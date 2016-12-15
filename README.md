@@ -56,6 +56,8 @@ npm install
 
 ### Testing
 
+To start a local copy of dynamoDB for testing, run ```docker-compose up -d```. See docker-compose.yml.
+
 This module requires AWS credentials to run integration tests. Run as follows (using your own AWS profile name):
 
 ```
