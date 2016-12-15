@@ -1,0 +1,48 @@
+{
+  "name": "aws-feature-toggles",
+  "version": "1.0.0",
+  "description": "Feature toggles for distributed systems. Requires AWS services.",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "istanbul cover _mocha -- --recursive test/",
+    "lint": "eslint .",
+    "test": "_mocha"
+  },
+  "keywords": [
+    "feature",
+    "toggles",
+    "flags",
+    "flipper",
+    "aws"
+  ],
+  "author": "Ian Patton <ian.patton@turner.com>",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.1.4",
+    "aws-sdk": "^2.7.13",
+    "debug": "^2.4.1",
+    "node-cache": "^4.1.0",
+    "node-uuid": "^1.4.7"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.12.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.6"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnnlabs/aws-feature-toggles.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cnnlabs/aws-feature-toggles/issues"
+  },
+  "homepage": "https://github.com/cnnlabs/aws-feature-toggles#readme"
+}

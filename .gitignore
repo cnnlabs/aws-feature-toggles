@@ -1,0 +1,8 @@
+.c9
+.idea
+.vscode
+docs
+node_modules
+npm-debug.log
+coverage
+.aws/credentials

@@ -1,0 +1,35 @@
+{
+    "extends": "eslint:recommended",
+    "env": {
+        "es6": true,
+        "node": true,
+        "mocha": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "rules": {
+        "array-bracket-spacing":       [2, "never"],
+        "arrow-parens":                [2, "always"],
+        "arrow-spacing":               [2, {"before": true, "after": true}],
+        "brace-style":                 [2, "1tbs", {"allowSingleLine": false}],
+        "comma-spacing":               [2, {"before": false, "after": true}],
+        "curly":                       [2, "all"],
+        "indent":                      [2, 4, {"SwitchCase": 1, "VariableDeclarator": 1}],
+        "key-spacing":                 [2, {"beforeColon": false, "afterColon": true}],
+        "keyword-spacing":             2,
+        "linebreak-style":             [2, "unix"],
+        "no-console":                  0,
+        "no-trailing-spaces":          2,
+        "object-curly-spacing":        [2, "never"],
+        "one-var":                     [2, "never"],
+        "prefer-template":             2,
+        "quote-props":                 [2, "as-needed"],
+        "quotes":                      [2, "single"],
+        "semi":                        [2, "always"],
+        "space-before-blocks":         [2, "always"],
+        "space-before-function-paren": [2, {"anonymous": "always", "named": "never"}],
+        "space-infix-ops":             [2, {"int32Hint": false}]
+    }
+}

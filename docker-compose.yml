@@ -1,0 +1,8 @@
+db:
+    image: tutum/dynamodb:latest
+    expose:
+        - "8000"
+    ports:
+        - "8000:8000"
+    volumes:
+        - /usr/local/var/dynamodb:/data
