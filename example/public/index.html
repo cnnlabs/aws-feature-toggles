@@ -1,0 +1,49 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+  var username = 'bob@gmail.com';
+  var socket = io();
+  var features = {
+      blueText: false,
+      showPhoto: false
+  }
+  function updateView () {
+      console.log('features', features);
+      if (features.blueText) {
+          $('h1').css('color','blue');
+      } else {
+          $('h1').css('color','black');
+      }
+
+      if (features.showPhoto) {
+          $('img').css('display','block');
+      } else {
+          $('img').css('display','none');
+      }
+  }
+
+  function reload () {
+      Object.keys(features).forEach(function(featureName) {
+          socket.emit('toggles:check', {
+             featureName: featureName,
+             target: username
+          });
+      });
+  }
+
+  socket.on('toggles:check', function (data) {
+      features[data.featureName] = data.response;
+      updateView();
+  });
+  socket.on('toggles:reload', function () {
+      reload();
+  });
+  reload();
+</script>
+
+<html>
+<h1>Hello World!</h1>
+<p>Run the util.js to try changing things!</p>
+<img style="display:none;" src="https://s-media-cache-ak0.pinimg.com/564x/c3/3f/fa/c33ffac80ec16553ec8694b6b4617667.jpg">
+<p>A <a href="/test">test route</a>  that can be enabled/disabled</p>
+</html>
