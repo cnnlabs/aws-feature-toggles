@@ -6,7 +6,9 @@
   "scripts": {
     "coverage": "istanbul cover _mocha -- --recursive test/",
     "lint": "eslint .",
-    "test": "_mocha"
+    "test": "_mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "feature",
@@ -22,7 +24,8 @@
     "aws-sdk": "^2.7.13",
     "debug": "^2.4.1",
     "node-cache": "^4.1.0",
-    "node-uuid": "^1.4.7"
+    "node-uuid": "^1.4.7",
+    "snyk": "^1.192.4"
   },
   "engines": {
     "node": ">=4.0.0"
@@ -44,5 +47,6 @@
   "bugs": {
     "url": "https://github.com/cnnlabs/aws-feature-toggles/issues"
   },
-  "homepage": "https://github.com/cnnlabs/aws-feature-toggles#readme"
+  "homepage": "https://github.com/cnnlabs/aws-feature-toggles#readme",
+  "snyk": true
 }
